@@ -10,6 +10,7 @@ SELECT @@foreign_key_checks;
 SET @@foreign_key_checks = 0 ;
 
 -- Tabla / Pelicula
+USE PROYECTO_FINAL;
 START TRANSACTION;
 INSERT INTO Pelicula ( titulo, duracion_minutos, genero, director, clasificacion, sinopsis) VALUE('Del revés 2', '96','Comedia','Kelsey Mann', '5', 'Secuela de Inside Out. Riley entra en la adolescencia y el Cuartel General sufre una repentina reforma para hacerle hueco a algo totalmente inesperado: ¡Nuevas emociones! Alegría, Tristeza, Ira, Miedo y Asco, con años de impecable gestión a sus espaldas');
 INSERT INTO Pelicula (titulo, duracion_minutos, genero, director, clasificacion, sinopsis) VALUE('Amigos imaginarios','104', 'Aventura', 'John Krasinski', '4', 'La historia sigue a un joven que tiene el poder de ver y hablar con los amigos imaginarios de la gente que le rodea. Poco a poco se irá haciendo amigo de aquellos que han sido olvidados');
@@ -24,3 +25,4 @@ SAVEPOINT SP2;
 ROLLBACK TO SP1;
 SELECT * FROM Pelicula;
 COMMIT;
+

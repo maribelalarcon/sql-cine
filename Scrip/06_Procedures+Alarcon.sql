@@ -15,10 +15,11 @@ BEGIN
     JOIN 
         Ticket AS t ON f.idfuncion = t.idfuncion
     WHERE 
-        p.pidelicula = p_idpelicula
+        p.idpelicula = p_idpelicula
     GROUP BY 
         p.titulo;
 END //
 DELIMITER ;
 
 CALL SP_ObtenerResumenAsistenciaIngresos(1);
+

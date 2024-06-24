@@ -61,4 +61,5 @@ WHERE idfuncion = 2;
 
 
 
+Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`proyecto_final`.`ticket`, CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`idfuncion`) REFERENCES `funcion` (`idfuncion`))
 
